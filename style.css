@@ -1,0 +1,1131 @@
+/* ===================================================
+   GOOGLE FONT
+=================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+
+/* ===================================================
+   RESET
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffd9ec,
+    #ffe8f3,
+    #fff4fa);
+
+    overflow:hidden;
+
+    color:#444;
+
+}
+
+
+/* ===================================================
+   SCREEN
+=================================================== */
+
+.screen{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:1s;
+
+    padding:30px;
+
+}
+
+.screen.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* ===================================================
+   FLOATING HEART
+=================================================== */
+
+.floating-hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+.floating-hearts span{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    color:#ff78b2;
+
+    font-size:18px;
+
+    animation:floatHeart linear infinite;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:
+translateY(0)
+scale(.5);
+
+opacity:0;
+
+}
+
+30%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(360deg)
+scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+
+/* ===================================================
+   COVER
+=================================================== */
+
+#cover{
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #ffd6ea,
+    #ffe8f6,
+    #fff8fc);
+
+    z-index:5;
+
+}
+
+.cover-content{
+
+    width:100%;
+
+    max-width:420px;
+
+    text-align:center;
+
+    animation:
+    fadeUp 1.3s ease;
+
+}
+
+.cover-content h3{
+
+    font-size:22px;
+
+    font-weight:500;
+
+    color:#c6538c;
+
+    line-height:1.8;
+
+    min-height:90px;
+
+}
+
+.cover-content h1{
+
+    margin-top:25px;
+
+    font-size:58px;
+
+    font-family:
+    'Great Vibes',
+    cursive;
+
+    color:#ff4d94;
+
+}
+
+.typing{
+
+    overflow:hidden;
+
+    white-space:pre-line;
+
+    border-right:3px solid #ff4d94;
+
+    animation:
+
+    typing 5s steps(60,end),
+
+    blink .8s infinite;
+
+}
+
+
+/* ===================================================
+   BUTTON
+=================================================== */
+
+.main-btn{
+
+    margin-top:45px;
+
+    border:none;
+
+    outline:none;
+
+    padding:
+
+    15px
+    55px;
+
+    border-radius:999px;
+
+    background:#ff5ea8;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 10px 25px
+    rgba(255,94,168,.35);
+
+}
+
+.main-btn:hover{
+
+    transform:
+
+    translateY(-3px)
+    scale(1.05);
+
+    box-shadow:
+
+    0 15px 35px
+    rgba(255,94,168,.45);
+
+}
+
+.main-btn:active{
+
+    transform:scale(.96);
+
+}
+
+
+/* ===================================================
+   ANIMATION
+=================================================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+}
+
+@keyframes typing{
+
+from{
+
+width:0;
+
+}
+
+to{
+
+width:100%;
+
+}
+
+}
+
+@keyframes blink{
+
+50%{
+
+border-color:transparent;
+
+}
+
+}
+
+
+/* ===================================================
+   SCROLLBAR
+=================================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff8dc2;
+
+border-radius:30px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ffe8f5;
+
+}
+
+/* ===================================================
+   PIN PAGE
+=================================================== */
+
+#pinPage{
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffd6ea,
+    #fff2f8);
+
+    z-index:4;
+
+}
+
+.pin-box{
+
+    width:100%;
+    max-width:380px;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:28px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(255,105,180,.15);
+
+}
+
+.pin-box h2{
+
+    color:#ff4d94;
+
+    font-size:24px;
+
+    margin-bottom:30px;
+
+}
+
+.pin-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.pin-dots span{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    border:2px solid #ff6aa9;
+
+    background:transparent;
+
+    transition:.3s;
+
+}
+
+.pin-dots span.active{
+
+    background:#ff5ea8;
+
+    transform:scale(1.15);
+
+}
+
+.keypad{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+.keypad button{
+
+    height:68px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    color:#ff4d94;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.keypad button:hover{
+
+    transform:scale(1.06);
+
+    background:#ffe2f0;
+
+}
+
+.keypad button:active{
+
+    transform:scale(.92);
+
+}
+
+#clear{
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+/* ===================================================
+   SHAKE
+=================================================== */
+
+.shake{
+
+    animation:shake .45s;
+
+}
+
+@keyframes shake{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+20%{
+
+transform:translateX(-8px);
+
+}
+
+40%{
+
+transform:translateX(8px);
+
+}
+
+60%{
+
+transform:translateX(-6px);
+
+}
+
+80%{
+
+transform:translateX(6px);
+
+}
+
+100%{
+
+transform:translateX(0);
+
+}
+
+}
+
+/* ===================================================
+   LETTER
+=================================================== */
+
+#letterPage{
+
+    overflow-y:auto;
+
+    padding:40px 20px;
+
+}
+
+.letter-card{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+    0 20px 45px rgba(255,105,180,.15);
+
+    animation:fadeUp 1s;
+
+}
+
+.letter-card h2{
+
+    color:#ff4d94;
+
+    font-size:40px;
+
+    font-family:'Great Vibes',cursive;
+
+    margin-bottom:30px;
+
+}
+
+.letter-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.letter-text p{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    animation:showText .8s forwards;
+
+}
+
+.letter-text p:nth-child(1){
+
+    animation-delay:.5s;
+
+}
+
+.letter-text p:nth-child(2){
+
+    animation-delay:1.3s;
+
+}
+
+.letter-text p:nth-child(3){
+
+    animation-delay:2.1s;
+
+}
+
+.letter-text p:nth-child(4){
+
+    animation-delay:2.9s;
+
+}
+
+.letter-text p:nth-child(5){
+
+    animation-delay:3.7s;
+
+}
+
+.letter-text p:nth-child(6){
+
+    animation-delay:4.5s;
+
+}
+
+.letter-text p:nth-child(7){
+
+    animation-delay:5.3s;
+
+}
+
+.last-text{
+
+    text-align:center;
+
+    font-size:22px !important;
+
+    font-weight:600;
+
+    color:#ff4d94;
+
+    margin-top:15px;
+
+}
+
+@keyframes showText{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================================================
+   QUESTION PAGE
+=================================================== */
+
+#questionPage{
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffd6ea,
+    #fff6fb);
+
+    z-index:3;
+
+}
+
+.question-box{
+
+    width:100%;
+    max-width:500px;
+
+    text-align:center;
+
+    animation:fadeUp .8s;
+
+}
+
+.question-box h2{
+
+    font-size:42px;
+
+    color:#ff4d94;
+
+    font-family:'Great Vibes',cursive;
+
+    margin-bottom:50px;
+
+    line-height:1.5;
+
+}
+
+.btn-group{
+
+    position:relative;
+
+    width:100%;
+
+    height:180px;
+
+}
+
+.yes-btn,
+.no-btn{
+
+    position:absolute;
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:16px 45px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.yes-btn{
+
+    left:18%;
+
+    background:#ff5ea8;
+
+    color:#fff;
+
+    box-shadow:
+    0 10px 25px
+    rgba(255,94,168,.35);
+
+}
+
+.yes-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+.no-btn{
+
+    right:18%;
+
+    background:white;
+
+    color:#ff5ea8;
+
+    border:2px solid #ff5ea8;
+
+}
+
+.no-btn:hover{
+
+    background:#fff3f8;
+
+}
+
+/* ===================================================
+   SUCCESS
+=================================================== */
+
+#successPage{
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffd9ec,
+    #fff5fb);
+
+}
+
+.success-card{
+
+    width:100%;
+    max-width:600px;
+
+    text-align:center;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 40px rgba(255,105,180,.18);
+
+    animation:fadeUp .8s;
+
+}
+
+.success-card h1{
+
+    font-size:55px;
+
+    color:#ff4d94;
+
+    font-family:'Great Vibes',cursive;
+
+    margin-bottom:20px;
+
+}
+
+.success-card p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+}
+
+/* ===================================================
+   DATE FORM
+=================================================== */
+
+#datePage{
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffe0ef,
+    #fff8fc);
+
+}
+
+.form-card{
+
+    width:100%;
+    max-width:650px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(255,105,180,.15);
+
+    animation:fadeUp .8s;
+
+}
+
+.form-card h2{
+
+    color:#ff4d94;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.form-card p{
+
+    margin-bottom:25px;
+
+    line-height:1.8;
+
+}
+
+textarea{
+
+    width:100%;
+
+    height:180px;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    padding:20px;
+
+    font-size:16px;
+
+    border-radius:18px;
+
+    background:#fff4f9;
+
+    margin-bottom:30px;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ===================================================
+   FINISH
+=================================================== */
+
+#finishPage{
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffd8ec,
+    #fff8fc);
+
+}
+
+.finish-card{
+
+    width:100%;
+    max-width:600px;
+
+    text-align:center;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 45px rgba(255,105,180,.15);
+
+    animation:fadeUp .8s;
+
+}
+
+.finish-card h1{
+
+    color:#ff4d94;
+
+    font-size:55px;
+
+    font-family:'Great Vibes',cursive;
+
+    margin-bottom:20px;
+
+}
+
+.finish-card p{
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+}
+
+/* ===================================================
+   BOUNCE
+=================================================== */
+
+.bounce{
+
+    animation:bounce .45s;
+
+}
+
+@keyframes bounce{
+
+0%{
+
+transform:scale(1);
+
+}
+
+40%{
+
+transform:scale(1.15);
+
+}
+
+70%{
+
+transform:scale(.95);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===================================================
+   FADE OUT
+=================================================== */
+
+.fade-out{
+
+    opacity:0 !important;
+
+    visibility:hidden !important;
+
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media(max-width:768px){
+
+.cover-content h1{
+
+font-size:48px;
+
+}
+
+.cover-content h3{
+
+font-size:18px;
+
+}
+
+.letter-card{
+
+padding:28px;
+
+}
+
+.question-box h2{
+
+font-size:34px;
+
+}
+
+.success-card h1{
+
+font-size:45px;
+
+}
+
+.finish-card h1{
+
+font-size:45px;
+
+}
+
+.form-card{
+
+padding:28px;
+
+}
+
+.yes-btn{
+
+left:10%;
+
+}
+
+.no-btn{
+
+right:10%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.main-btn{
+
+width:100%;
+
+}
+
+.yes-btn,
+.no-btn{
+
+padding:15px 35px;
+
+font-size:16px;
+
+}
+
+.pin-box{
+
+padding:25px 18px;
+
+}
+
+.keypad button{
+
+height:60px;
+
+font-size:20px;
+
+}
+
+textarea{
+
+height:150px;
+
+}
+
+  }
