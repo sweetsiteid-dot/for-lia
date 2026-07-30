@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Lia 🤍</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===================================== -->
+<!-- MUSIC -->
+<!-- ===================================== -->
+
+<audio
+id="bgMusic"
+loop>
+
+<source src="assets/music/shapeofmyheart.mp3"
+type="audio/mp3">
+
+</audio>
+
+<!-- ===================================== -->
+<!-- FLOATING HEART -->
+<!-- ===================================== -->
+
+<div class="floating-hearts"></div>
+
+<!-- ===================================== -->
+<!-- COVER -->
+<!-- ===================================== -->
+
+<section
+id="cover"
+class="screen active">
+
+<div class="cover-content">
+
+<h3 class="typing">
+
+I made this website
+just for u
+
+</h3>
+
+<h1>
+
+"Lia"
+
+</h1>
+
+<button
+id="playBtn"
+class="main-btn">
+
+Open
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PIN -->
+<!-- ===================================== -->
+
+<section
+id="pinPage"
+class="screen">
+
+<div class="pin-box">
+
+<h2>
+
+Enter Secret PIN
+
+</h2>
+
+<div
+id="pinDots"
+class="pin-dots">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="keypad">
+
+<button class="num">1</button>
+
+<button class="num">2</button>
+
+<button class="num">3</button>
+
+<button class="num">4</button>
+
+<button class="num">5</button>
+
+<button class="num">6</button>
+
+<button class="num">7</button>
+
+<button class="num">8</button>
+
+<button class="num">9</button>
+
+<button
+id="clear">
+
+CLEAR
+
+</button>
+
+<button class="num">
+
+0
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- LETTER -->
+<!-- ===================================== -->
+
+<section
+id="letterPage"
+class="screen">
+
+<div class="letter-card">
+
+<h2>
+
+Hai Lia,
+
+</h2>
+
+<div
+class="letter-text">
+
+<p>
+
+Sebenernya Ezra udah mikir berkali-kali mau ngomong ini atau engga.
+
+</p>
+
+<p>
+
+Takut kecepetan,
+takut bikin kamu ilfeel,
+takut cuma Ezra yang ngerasain.
+
+</p>
+
+<p>
+
+Tapi daripada dipendem terus,
+Ezra milih jujur.
+
+</p>
+
+<p>
+
+Lia,
+makasih ya udah hadir beberapa hari ini.
+
+</p>
+
+<p>
+
+Tanpa sadar kamu bikin hari-hari Ezra lebih seru,
+lebih banyak senyumnya,
+dan lebih banyak hal yang pengen Ezra ceritain ke kamu.
+
+  </p>
+
+  <p>
+
+Jadi...
+
+boleh engga kalau hubungan kita
+engga cuma sebatas talent sama customer lagi?
+
+</p>
+
+<p>
+
+Ezra pengen kenal kamu
+lebih lama,
+lebih deket,
+
+dan kalau kamu kasih izin...
+
+</p>
+
+<p class="last-text">
+
+Ezra pengen jadi pacar kamu. 🤍
+
+</p>
+
+<button
+id="nextBtn"
+class="main-btn">
+
+Next →
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- QUESTION -->
+<!-- ===================================== -->
+
+<section
+id="questionPage"
+class="screen">
+
+<div class="question-box">
+
+<h2>
+
+Will You Be
+My Girlfriend?
+
+🤍
+
+</h2>
+
+<div class="btn-group">
+
+<button
+id="yesBtn"
+class="yes-btn">
+
+YES
+
+</button>
+
+<button
+id="noBtn"
+class="no-btn">
+
+NO
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SUCCESS -->
+<!-- ===================================== -->
+
+<section
+id="successPage"
+class="screen">
+
+<div class="success-card">
+
+<h1>
+
+Yeeaayy!!
+
+🤍🤍🤍
+
+</h1>
+
+<p>
+
+You just made me
+
+the happiest person alive.
+
+</p>
+
+<p>
+
+Thank you for choosing me.
+
+I promise I'll always try
+
+to make you smile.
+
+</p>
+
+<div
+id="confettiOrigin">
+
+</div>
+
+<button
+id="continueBtn"
+class="main-btn">
+
+Continue
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- DATE FORM -->
+<!-- ===================================== -->
+
+<section
+id="datePage"
+class="screen">
+
+<div class="form-card">
+
+<h2>
+
+One Last Question ✨
+
+</h2>
+
+<p>
+
+Kalau jadi date pertama kita,
+
+kamu pengen kemana?
+
+</p>
+
+<textarea
+
+id="dateInput"
+
+placeholder="Tulis jawaban kamu di sini...">
+
+</textarea>
+
+<button
+id="submitBtn"
+class="main-btn">
+
+Kirim 🤍
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FINISH -->
+<!-- ===================================== -->
+
+<section
+id="finishPage"
+class="screen">
+
+<div class="finish-card">
+
+<h1>
+
+Thank You 🤍
+
+</h1>
+
+<p>
+
+Jawaban kamu udah berhasil dikirim.
+
+Semoga ini jadi awal
+
+dari cerita kita yang lebih panjang.
+
+</p>
+
+<p>
+
+Jangan lupa screenshot
+
+halaman ini yaa 🤍
+
+</p>
+
+<button
+id="restartBtn"
+class="main-btn">
+
+Finish
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SCRIPT -->
+<!-- ===================================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
