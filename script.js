@@ -592,3 +592,26 @@ window.addEventListener("load",()=>{
     typeWriter();
 
 });
+
+
+@media (max-width:768px){
+
+    .letter-card{
+        padding:22px 18px;
+        border-radius:18px;
+    }
+
+    .letter-card h2{
+        font-size:36px;
+    }
+
+    .letter-text p{
+        font-size:16px;
+        line-height:1.9;
+    }
+
+    .last-text{
+        font-size:20px !important;
+    }
+
+}
