@@ -306,48 +306,33 @@ nextBtn.addEventListener("click",()=>{
    NO BUTTON
 =================================================== */
 
+const positions = [
+    { top: "20%", left: "65%" }, // atas kanan
+    { top: "65%", left: "20%" }, // bawah kiri
+    { top: "20%", left: "15%" }, // atas kiri
+    { top: "65%", left: "65%" }  // bawah kanan
+];
+
+let currentPos = 0;
+
+noBtn.style.position = "fixed";
+
 function moveNoButton(){
 
-    const box=document.querySelector(".btn-group");
+    currentPos = (currentPos + 1) % positions.length;
 
-    const maxX=box.clientWidth-120;
-
-    const maxY=box.clientHeight-70;
-
-    const x=Math.random()*maxX;
-
-    const y=Math.random()*maxY;
-
-    noBtn.style.left=x+"px";
-
-    noBtn.style.top=y+"px";
-
+    noBtn.style.top = positions[currentPos].top;
+    noBtn.style.left = positions[currentPos].left;
 }
 
+/* Desktop */
+noBtn.addEventListener("mouseenter", moveNoButton);
 
-/* ===================================================
-   DESKTOP
-=================================================== */
-
-noBtn.addEventListener("mouseenter",()=>{
-
-    moveNoButton();
-
-});
-
-
-/* ===================================================
-   MOBILE
-=================================================== */
-
+/* Mobile */
 noBtn.addEventListener("touchstart",(e)=>{
-
     e.preventDefault();
-
     moveNoButton();
-
 });
-
 
 /* ===================================================
    YES BUTTON
