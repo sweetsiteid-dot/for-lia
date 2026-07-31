@@ -40,9 +40,9 @@ let pin = "";
 
 const correctPin = "3107";
 
-/* ===================================================
+/* =========================================
    TYPEWRITER
-=================================================== */
+========================================= */
 
 const typing = document.querySelector(".typing");
 const coverName = document.querySelector(".cover-name");
@@ -54,24 +54,33 @@ let index = 0;
 
 typing.textContent = "";
 
-function typeWriter(){
+function typeWriter() {
 
-    if(index < text.length){
+    if (index < text.length) {
 
         typing.textContent += text.charAt(index);
 
         index++;
 
-        setTimeout(typeWriter, 70);
+        setTimeout(typeWriter, 80);
 
-    }else{
+    } else {
 
-        coverName.classList.add("show");
+        setTimeout(() => {
+
+            coverName.classList.add("show");
+
+        }, 400);
 
     }
 
 }
 
+window.addEventListener("load", () => {
+
+    typeWriter();
+
+});
 
 /* ===================================================
    CHANGE PAGE
