@@ -306,35 +306,42 @@ nextBtn.addEventListener("click",()=>{
    NO BUTTON
 =================================================== */
 
-const positions = [  
-    { top: "20%", left: "65%" }, // atas kanan  
-    { top: "65%", left: "20%" }, // bawah kiri  
-    { top: "20%", left: "15%" }, // atas kiri  
-    { top: "65%", left: "65%" }  // bawah kanan  
-];  
-  
-let currentPos = 0;  
-  
-noBtn.style.position = "fixed";  
-  
-function moveNoButton(){  
-  
-    currentPos = (currentPos + 1) % positions.length;  
-  
-    noBtn.style.top = positions[currentPos].top;  
-    noBtn.style.left = positions[currentPos].left;  
-}  
+const positions = [
+    { top: "15%", left: "10%" },
+    { top: "15%", left: "65%" },
+    { top: "40%", left: "20%" },
+    { top: "40%", left: "65%" },
+    { top: "65%", left: "10%" },
+    { top: "65%", left: "65%" },
+    { top: "80%", left: "35%" },
+    { top: "25%", left: "40%" }
+];
+
+let currentPos = -1;
+
+noBtn.style.position = "fixed";
+
+function moveNoButton(){
+
+    let next;
+
+    do{
+        next = Math.floor(Math.random() * positions.length);
+    }while(next === currentPos);
+
+    currentPos = next;
+
+    noBtn.style.top = positions[currentPos].top;
+    noBtn.style.left = positions[currentPos].left;
+}
 
 /* Desktop */
 noBtn.addEventListener("mouseenter", moveNoButton);
 
 /* Mobile */
-noBtn.addEventListener("touchstart",(e)=>{
-
+noBtn.addEventListener("touchstart", (e)=>{
     e.preventDefault();
-
     moveNoButton();
-
 });
 
 /* ===================================================
