@@ -306,25 +306,24 @@ nextBtn.addEventListener("click",()=>{
    NO BUTTON
 =================================================== */
 
-let isTop = false;
-
-noBtn.style.position = "absolute";
-
-function moveNoButton(){
-
-    if(isTop){
-
-        noBtn.style.top = "110px"; // bawah
-
-    }else{
-
-        noBtn.style.top = "0px"; // atas
-
-    }
-
-    isTop = !isTop;
-
-}
+const positions = [  
+    { top: "20%", left: "65%" }, // atas kanan  
+    { top: "65%", left: "20%" }, // bawah kiri  
+    { top: "20%", left: "15%" }, // atas kiri  
+    { top: "65%", left: "65%" }  // bawah kanan  
+];  
+  
+let currentPos = 0;  
+  
+noBtn.style.position = "fixed";  
+  
+function moveNoButton(){  
+  
+    currentPos = (currentPos + 1) % positions.length;  
+  
+    noBtn.style.top = positions[currentPos].top;  
+    noBtn.style.left = positions[currentPos].left;  
+}  
 
 /* Desktop */
 noBtn.addEventListener("mouseenter", moveNoButton);
