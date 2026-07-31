@@ -319,9 +319,9 @@ const positions = [
 
 let currentPos = -1;
 
-noBtn.style.position = "fixed";
-
 function moveNoButton(){
+
+    noBtn.style.position = "fixed";
 
     let next;
 
@@ -333,6 +333,7 @@ function moveNoButton(){
 
     noBtn.style.top = positions[currentPos].top;
     noBtn.style.left = positions[currentPos].left;
+
 }
 
 /* Desktop */
