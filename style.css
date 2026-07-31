@@ -218,12 +218,6 @@ opacity:0;
 
     border-right:3px solid #ff4d94;
 
-    animation:
-
-    typing 5s steps(60,end),
-
-    blink .8s infinite;
-
 }
 
 
