@@ -40,6 +40,38 @@ let pin = "";
 
 const correctPin = "3107";
 
+/* ===================================================
+   TYPEWRITER
+=================================================== */
+
+const typing = document.querySelector(".typing");
+const coverName = document.querySelector(".cover-name");
+
+const text = `I made this website
+just for u`;
+
+let index = 0;
+
+typing.textContent = "";
+
+function typeWriter(){
+
+    if(index < text.length){
+
+        typing.textContent += text.charAt(index);
+
+        index++;
+
+        setTimeout(typeWriter, 70);
+
+    }else{
+
+        coverName.classList.add("show");
+
+    }
+
+}
+
 
 /* ===================================================
    CHANGE PAGE
@@ -541,3 +573,13 @@ document.addEventListener("visibilitychange",()=>{
 =================================================== */
 
 console.log("Website For Lia 🤍");
+
+/* ===================================================
+   START TYPEWRITER
+=================================================== */
+
+window.addEventListener("load",()=>{
+
+    typeWriter();
+
+});
