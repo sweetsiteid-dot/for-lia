@@ -787,7 +787,11 @@ transform:translateY(0);
 
     width:100%;
 
+    max-width:350px;
+
     height:180px;
+
+    margin:0 auto;
 
 }
 
@@ -814,15 +818,16 @@ transform:translateY(0);
 
 .yes-btn{
 
-    left:18%;
+    left:0;
+
+    top:110px;
 
     background:#ff5ea8;
 
     color:#fff;
 
     box-shadow:
-    0 10px 25px
-    rgba(255,94,168,.35);
+    0 10px 25px rgba(255,94,168,.35);
 
 }
 
@@ -834,13 +839,19 @@ transform:translateY(0);
 
 .no-btn{
 
-    right:18%;
+    left:55%;
+
+    top:110px;
 
     background:white;
 
     color:#ff5ea8;
 
     border:2px solid #ff5ea8;
+
+    transition:.35s ease;
+
+    z-index:999;
 
 }
 
