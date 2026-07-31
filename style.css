@@ -30,7 +30,7 @@ body{
     #ffe8f3,
     #fff4fa);
 
-    overflow:hidden;
+    overflow-x:hidden;
 
     color:#444;
 
@@ -72,6 +72,28 @@ body{
     opacity:1;
 
     visibility:visible;
+
+}
+
+/* =========================================
+   LETTER PAGE FIX
+========================================= */
+
+#letterPage{
+
+    align-items:flex-start !important;
+
+    justify-content:flex-start !important;
+
+    overflow-y:auto;
+
+    padding:70px 20px 40px;
+
+}
+
+#letterPage .letter-card{
+
+    margin:0 auto;
 
 }
 
