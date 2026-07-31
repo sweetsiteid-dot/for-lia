@@ -785,9 +785,7 @@ transform:translateY(0);
 
     position:relative;
 
-    width:100%;
-
-    max-width:350px;
+    width:320px;
 
     height:180px;
 
@@ -818,7 +816,7 @@ transform:translateY(0);
 
 .yes-btn{
 
-    left:0;
+    left:25px;
 
     top:110px;
 
@@ -839,7 +837,7 @@ transform:translateY(0);
 
 .no-btn{
 
-    left:55%;
+    left:180px;
 
     top:110px;
 
