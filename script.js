@@ -577,7 +577,7 @@ document.addEventListener("visibilitychange",()=>{
    END
 =================================================== */
 
-console.log("Website For Lia 🤍");
+console.log("Website For Zeona 🤍");
 
 /* ===================================================
    START TYPEWRITER
